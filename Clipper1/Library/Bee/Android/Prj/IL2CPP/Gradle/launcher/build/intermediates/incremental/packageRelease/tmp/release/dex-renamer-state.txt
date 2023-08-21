@@ -1,0 +1,4 @@
+#Mon Aug 21 13:49:00 ACST 2023
+base.0=X\:\\Clipper1\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\launcher\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

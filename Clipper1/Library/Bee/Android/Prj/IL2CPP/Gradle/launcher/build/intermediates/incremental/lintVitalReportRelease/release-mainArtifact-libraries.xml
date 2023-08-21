@@ -1,0 +1,32 @@
+<libraries>
+  <library
+      name="X:\Clipper1\Library\Bee\Android\Prj\IL2CPP\Gradle@@:unityLibrary::release"
+      jars="X:\Clipper1\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\.transforms\ac5233a12f2cc386b356e41cd7a830d5\transformed\out\jars\classes.jar;X:\Clipper1\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\.transforms\ac5233a12f2cc386b356e41cd7a830d5\transformed\out\jars\libs\unity-classes.jar"
+      resolved="Gradle:unityLibrary:unspecified"
+      folder="X:\Clipper1\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\.transforms\ac5233a12f2cc386b356e41cd7a830d5\transformed\out"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="__local_aars__:X:\Clipper1\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\libs\unity-classes.jar:unspecified@jar"
+      jars="X:\Clipper1\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\libs\unity-classes.jar"
+      resolved="__local_aars__:X:\Clipper1\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\libs\unity-classes.jar:unspecified"/>
+  <library
+      name="X:\Clipper1\Library\Bee\Android\Prj\IL2CPP\Gradle@@:unityLibrary:xrmanifest.androidlib::release"
+      jars="X:\Clipper1\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\xrmanifest.androidlib\build\.transforms\6ff5e3a1a9fa9f4633e5535ee943a61b\transformed\out\jars\classes.jar"
+      resolved="Gradle.unityLibrary:xrmanifest.androidlib:unspecified"
+      folder="X:\Clipper1\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\xrmanifest.androidlib\build\.transforms\6ff5e3a1a9fa9f4633e5535ee943a61b\transformed\out"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+</libraries>
