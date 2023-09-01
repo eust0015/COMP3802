@@ -1,9 +1,8 @@
-using System;
 using UnityEngine;
 
 namespace UI
 {
-    public class TitleScreen : MonoBehaviour
+    public class PauseMenu : MonoBehaviour
     {
         public delegate void HideEvent();
 
@@ -11,12 +10,12 @@ namespace UI
 
         private void Start()
         {
-            StartButton.OnClick += Hide;
+            ContinueButton.OnClick += Hide;
         }
 
         private void OnDestroy()
         {
-            StartButton.OnClick -= Hide;
+            ContinueButton.OnClick -= Hide;
         }
         
         private void Hide()
