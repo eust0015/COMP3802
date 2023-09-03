@@ -6,23 +6,22 @@ namespace UI
     public class TitleScreen : MonoBehaviour
     {
         public delegate void HideEvent();
-        public static event HideEvent OnHide;
-        
-        [SerializeField] private GameObject background;
 
-        private void OnEnable()
+        public static event HideEvent OnHide;
+
+        private void Start()
         {
             StartButton.OnClick += Hide;
         }
 
-        private void OnDisable()
+        private void OnDestroy()
         {
             StartButton.OnClick -= Hide;
         }
         
         private void Hide()
         {
-            background.SetActive(false);
+            gameObject.SetActive(false);
             OnHide?.Invoke();
         }
     }
