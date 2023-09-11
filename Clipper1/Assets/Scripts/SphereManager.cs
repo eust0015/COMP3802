@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SphereManager : MonoBehaviour
-{
-public GameObject[] spheres;
-private Vector3 spherePosition;
-public GameObject currentSphere;
-private Quaternion sphereRotation;
+public class SphereManager : MonoBehaviour {
+
+    [SerializeField]
+    private float rotationTime = 10;
+    
+    public GameObject[] spheres;
+    private Vector3 spherePosition;
+    public GameObject currentSphere;
+    private Quaternion sphereRotation;
+
+    private int currentIndex = 0;
 
     void Start()
     {
@@ -23,9 +28,18 @@ private Quaternion sphereRotation;
         currentSphere = Instantiate(spheres[newSphereIndex], spherePosition, sphereRotation);
     }
 
-    public IEnumerator switchTest()
-    {
-        yield return new WaitForSeconds(3);
-        switchSphere(0);
+    public IEnumerator switchTest() {
+
+        while (true) {
+            yield return new WaitForSeconds(3);
+            
+            currentIndex++;
+            if (currentIndex >= spheres.Length) {
+
+                currentIndex = 0;
+            }
+            
+            switchSphere(currentIndex);
+        }
     }
 }
