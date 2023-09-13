@@ -5758,13 +5758,13 @@ MonoBehaviour:
   subtitles:
   - speaker: Speaker 1
     subtitle: Subtitle 1
-    duration: 0
+    duration: 5
   - speaker: Speaker 2
     subtitle: Subtitle 2
-    duration: 0
+    duration: 5
   - speaker: Speaker 3
     subtitle: Subtitle 3
-    duration: 0
+    duration: 5
   isDisplaying: 0
   speaker: {fileID: 4704240697948877570}
   subtitle: {fileID: 833598768}
@@ -9229,7 +9229,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 833598765}
-  m_LocalRotation: {x: -0, y: 0.9914449, z: -0.000000004125952, w: 0.13052619}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -18206,7 +18206,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -2576.8457, y: 78}
+  m_SizeDelta: {x: -2090.754, y: 78}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1813697608
 MonoBehaviour:
@@ -23584,7 +23584,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4704240697948877583}
-  m_LocalRotation: {x: -0, y: 0.9914449, z: -0.000000004125952, w: 0.13052619}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
