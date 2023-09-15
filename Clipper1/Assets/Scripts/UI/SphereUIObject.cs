@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,5 +21,16 @@ public class SphereUIObject : MonoBehaviour
         Debug.Log("switching to sphere " + index);
         sphereManager.switchSphere(index);
         
+    }
+    
+    public void move()
+    {
+        Debug.Log("switching to sphere " + index);
+        sphereManager.switchSphere(index);
+        
+    }
+    
+    public void hello() {
+        Debug.Log("Hello");
     }
 }
