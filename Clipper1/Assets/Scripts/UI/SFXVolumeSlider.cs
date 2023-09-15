@@ -29,7 +29,7 @@ namespace UI
         {
             float log10Volume = Mathf.Log10(value) * 20;
             mixer.SetFloat(AUDIO_MIXER_GROUP_NAME, log10Volume);
-            valueText.text = log10Volume + " dB";
+            valueText.text = (value * 100).ToString("0");
             OnValueChanged?.Invoke(value);
         }
     }

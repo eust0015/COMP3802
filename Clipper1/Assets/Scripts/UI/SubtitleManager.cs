@@ -14,6 +14,16 @@ namespace UI
         [SerializeField] private TMP_Text speaker;
         [SerializeField] private TMP_Text subtitle;
 
+        private void OnEnable()
+        {
+            SubtitleFontSizeSlider.OnValueChanged += UpdateFontSizes;
+        }
+
+        private void OnDisable()
+        {
+            SubtitleFontSizeSlider.OnValueChanged -= UpdateFontSizes;
+        }
+        
         private void Start()
         {
             Display();
@@ -35,7 +45,7 @@ namespace UI
             isDisplaying = true;
             background.SetActive(true);
             var nextSubtitle = subtitles[0];
-            speaker.text = nextSubtitle.speaker + ": ";
+            speaker.text = nextSubtitle.speaker + ":";
             subtitle.text = nextSubtitle.subtitle;
             StartCoroutine(Wait(nextSubtitle.duration));
         }
@@ -55,6 +65,12 @@ namespace UI
             {
                 Display(); 
             }
+        }
+        
+        private void UpdateFontSizes(float value)
+        {
+            speaker.fontSize = value;
+            subtitle.fontSize = value;
         }
         
     }
