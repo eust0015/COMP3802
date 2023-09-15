@@ -19,7 +19,7 @@ public class SphereManager : MonoBehaviour {
         currentSphere = GameObject.FindWithTag("Sphere");
         spherePosition = currentSphere.transform.position;
         sphereRotation = currentSphere.transform.rotation;
-        StartCoroutine("switchTest");
+        //StartCoroutine("switchTest");
     }
 
     public void switchSphere(int newSphereIndex)

@@ -44,10 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc816ed95375c8a4b885e78f7e3bc1ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationTime: 10
   spheres:
   - {fileID: 611492238425980230, guid: a63e31d20784a9b40b2a09deebdcb2b7, type: 3}
   - {fileID: 6286743946079976200, guid: aa9aa9a6937d8824d8766c1fe0c1d637, type: 3}
   - {fileID: 6191244959443013619, guid: b41100ec351c89b4291d7dccff29f1f0, type: 3}
   - {fileID: 2535454680465844304, guid: 1e25c1168b1efad45a57fb9036cf5690, type: 3}
   - {fileID: 867678736578769527, guid: 7287133b2b9cc1045b85847bfd8cf6bb, type: 3}
-  currentSphere: {fileID: 0}
+  currentSphere: {fileID: 611492238425980230, guid: a63e31d20784a9b40b2a09deebdcb2b7, type: 3}

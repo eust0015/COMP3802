@@ -14,7 +14,7 @@ public class ExitDoor : MonoBehaviour {
         if (delta <= timeToSwitch) {
             delta += Time.deltaTime;
         } else {
-            GameObject.FindWithTag("LevelManager").GetComponent<LevelManager>().NextLevel();
+//            GameObject.FindWithTag("LevelManager").GetComponent<LevelManager>().NextLevel();
         }
     }
 }
