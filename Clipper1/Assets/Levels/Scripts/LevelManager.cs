@@ -6,23 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
     
-    //private LevelClass currentLevel;
+    private LevelClass currentLevel;
     
-    //[Header("This is a list of all levels/rooms (LevelData) that exist in the clipper. \n(Prefab should only be edited to include all levels)")]
-    //public List<GameObject> levels = new List<GameObject>();
+    [Header("This is a list of all levels/rooms (LevelData) that exist in the clipper. \n(Prefab should only be edited to include all levels)")]
+    public List<LevelClass> levels = new List<LevelClass>();
 
-    //public void Start() {
+    // Switches to the desired scene based on the scenes index in the levels list/array.
+    public void SwitchLevel(int newLevelIndex) {
 
-        //if (GameObject.FindWithTag("LevelData").GetComponent<LevelClass>()) {
-            //currentLevel = GameObject.FindWithTag("LevelData").GetComponent<LevelClass>();
-        //} else {
-        //    Debug.LogError("No LevelData Object in Scene!");
-       // }
-  //  }
-
-   // public void NextLevel() {
-
-  //      Debug.Log("Changing to Scene: " + currentLevel.GetNextScene().name);
- //       SceneManager.LoadScene(currentLevel.GetNextScene().name);
-   // }
+        SceneManager.LoadScene(levels[newLevelIndex].GetSceneName());
+    }
 }

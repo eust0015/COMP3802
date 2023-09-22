@@ -3,16 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//public class LevelClass : MonoBehaviour {
+[CreateAssetMenu(fileName = "LevelClass", menuName = "ScriptableObjects/LevelClassScriptableObject", order = 1)]
+public class LevelClass : ScriptableObject {
 
-    //[SerializeField]
-   // private String levelName;
-   // [SerializeField]
-    //private UnityEditor.SceneAsset sceneAsset;
-   // [SerializeField]
-    //private UnityEditor.SceneAsset nextLevelSceneAsset;
+    [SerializeField]
+    private String levelName;
+    [SerializeField]
+    private UnityEditor.SceneAsset sceneAsset;
 
-    //public UnityEditor.SceneAsset GetNextScene() {
-    //    return nextLevelSceneAsset;
-    //}
-//}
+    public string GetSceneName() {
+        return sceneAsset.name;
+    }
+}

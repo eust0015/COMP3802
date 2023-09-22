@@ -28,6 +28,7 @@ public class SphereManager : MonoBehaviour {
         currentSphere = Instantiate(spheres[newSphereIndex], spherePosition, sphereRotation);
     }
 
+    // Deprecated Test Code (Orson)
     public IEnumerator switchTest() {
 
         while (true) {

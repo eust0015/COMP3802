@@ -4,26 +4,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class SphereUIObject : MonoBehaviour
-{
-    public int index;
-    private GameObject sphereManagerObject;
-    private SphereManager sphereManager;
+public class SphereUIObject : MonoBehaviour {
+    
+    [Header("SphereUIObject: The index at which this spheres position is within the SphereManagers Sphere list/array. \n" +
+            "SphereUIObjectLevelTransition: The index at which this spheres next level is within the LevelManagers LevelClass list/array.")]
+    public int index = -1;
+    protected GameObject sphereManagerObject;
+    protected SphereManager sphereManager;
 
-    private void Start()
+    protected virtual void Start()
     {
         sphereManagerObject = GameObject.FindWithTag("SphereManager");
         sphereManager = sphereManagerObject.GetComponent<SphereManager>();
     }
 
-    public void OnPointerClick(PointerEventData pointerEventData)
+    // Believe this is deprecated (Orson)
+    public virtual void OnPointerClick(PointerEventData pointerEventData)
     {
         Debug.Log("switching to sphere " + index);
         sphereManager.switchSphere(index);
         
     }
     
-    public void move()
+    public virtual void move()
     {
         Debug.Log("switching to sphere " + index);
         sphereManager.switchSphere(index);
