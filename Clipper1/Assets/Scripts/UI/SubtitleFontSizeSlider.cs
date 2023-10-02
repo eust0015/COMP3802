@@ -25,7 +25,7 @@ namespace UI
 
         private void OnValueChangedHandler(float value)
         {
-            valueText.text = value.ToString();
+            valueText.text = value.ToString("0");
             OnValueChanged?.Invoke(value);
         }
     }

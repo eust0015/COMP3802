@@ -42,7 +42,16 @@ namespace UI
         
         private void UpdateFontSizes(float value)
         {
-            subtitle.fontSize = value;
+            //subtitle.fontSize = value;
+            if (value == 0)
+            {
+                transform.localScale = new Vector3(0, 0, 0);   
+            }
+            else
+            {
+                transform.localScale = new Vector3(value / 10, value / 10, value / 10);   
+            }
+
         }
     }
 }
