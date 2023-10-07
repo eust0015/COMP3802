@@ -792,9 +792,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c6984c48aed9a154294088f4265d8478, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7795487571902444155}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c6984c48aed9a154294088f4265d8478, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1438530123905563084}
   m_SourcePrefab: {fileID: 100100000, guid: c6984c48aed9a154294088f4265d8478, type: 3}
 --- !u!4 &2714567421874281047 stripped
 Transform:
@@ -1053,23 +1050,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 271199b5f2bb21142b87c39b4c3e6af5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  watcher: {fileID: 1438530123905563084}
+  watcher: {fileID: 0}
   spawnOffsetDistance: 2
---- !u!114 &1438530123905563084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3379885672203174125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76a6c275493027d4087ab24c73855453, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  menuButtonPress:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!137 &7506194400250160558 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: -3887185075125053422, guid: c6984c48aed9a154294088f4265d8478, type: 3}

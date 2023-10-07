@@ -1,31 +1,34 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.XR;
 
 namespace Input
 {
-    [System.Serializable]
-    public class MenuButtonEvent : UnityEvent<bool> { }
-
-    public class MenuButtonWatcher : MonoBehaviour
+    public class XRMenuButtonWatcher : MonoBehaviour
     {
-        public MenuButtonEvent menuButtonPress;
+        public delegate void PressEvent(bool pressed);
+        public static event PressEvent OnPress;
 
+        public static XRMenuButtonWatcher Instance { get; private set; }
         private bool lastButtonState = false;
         private List<InputDevice> devicesWithMenuButton;
 
         private void Awake()
         {
-            if (menuButtonPress == null)
-            {
-                menuButtonPress = new MenuButtonEvent();
-            }
-
+            // If there is an instance, and it's not me, delete myself.
+            if (Instance != null && Instance != this) 
+            { 
+                Destroy(this); 
+            } 
+            else 
+            { 
+                Instance = this; 
+            } 
+            
             devicesWithMenuButton = new List<InputDevice>();
         }
 
-        void OnEnable()
+        private void Start()
         {
             List<InputDevice> allDevices = new List<InputDevice>();
             InputDevices.GetDevices(allDevices);
@@ -36,7 +39,7 @@ namespace Input
             InputDevices.deviceDisconnected += InputDevices_deviceDisconnected;
         }
 
-        private void OnDisable()
+        private void OnDestroy()
         {
             InputDevices.deviceConnected -= InputDevices_deviceConnected;
             InputDevices.deviceDisconnected -= InputDevices_deviceDisconnected;
@@ -58,7 +61,7 @@ namespace Input
                 devicesWithMenuButton.Remove(device);
         }
 
-        void Update()
+        private void Update()
         {
             bool tempState = false;
             foreach (var device in devicesWithMenuButton)
@@ -71,7 +74,7 @@ namespace Input
 
             if (tempState != lastButtonState) // Button state changed since last frame
             {
-                menuButtonPress.Invoke(tempState);
+                OnPress?.Invoke(tempState);
                 lastButtonState = tempState;
             }
         }
