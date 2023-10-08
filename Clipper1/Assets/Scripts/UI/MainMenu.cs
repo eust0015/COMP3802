@@ -1,38 +1,28 @@
 using Input;
 using UnityEngine;
 using System.Collections;
-using UnityEngine.InputSystem;
 
 namespace UI
 {
     public class MainMenu : MonoBehaviour
     {
         public delegate void HideEvent();
-
         public static event HideEvent OnHide;
-
-        public MenuButtonWatcher watcher;
         
         [SerializeField] private float spawnOffsetDistance = 2f;
         
         private void Start()
         {
             ContinueButton.OnClick += Hide;
-            watcher.menuButtonPress.AddListener(OnMenuButtonEvent);
+            XRMenuButtonWatcher.OnPress += OnMenuButtonEvent;
+            KeyboardMenuButtonWatcher.OnPress += OnMenuButtonEvent;
         }
 
         private void OnDestroy()
         {
             ContinueButton.OnClick -= Hide;
-            watcher.menuButtonPress.RemoveListener(OnMenuButtonEvent);
-        }
-        
-        private void Update()
-        {
-            if (Keyboard.current.escapeKey.wasPressedThisFrame)
-            {
-                OnMenuButtonEvent(true);
-            }
+            XRMenuButtonWatcher.OnPress -= OnMenuButtonEvent;
+            KeyboardMenuButtonWatcher.OnPress -= OnMenuButtonEvent;
         }
         
         private void Hide()
