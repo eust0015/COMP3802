@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 namespace UI
 {
@@ -10,16 +11,7 @@ namespace UI
         [SerializeField] private List<SubtitleData> subtitles;
         [SerializeField] private TMP_Text subtitle;
         [SerializeField] private int subtitleIndex;
-
-        private void OnEnable()
-        {
-            SubtitleFontSizeSlider.OnValueChanged += UpdateFontSizes;
-        }
-
-        private void OnDisable()
-        {
-            SubtitleFontSizeSlider.OnValueChanged -= UpdateFontSizes;
-        }
+        [SerializeField] private Slider scaleSlider;
         
         private void Start()
         {
@@ -38,20 +30,6 @@ namespace UI
             yield return new WaitForSeconds(duration);
             subtitleIndex = subtitleIndex < subtitles.Count - 1 ? subtitleIndex + 1 : 0;
             Display();
-        }
-        
-        private void UpdateFontSizes(float value)
-        {
-            //subtitle.fontSize = value;
-            if (value == 0)
-            {
-                transform.localScale = new Vector3(0, 0, 0);   
-            }
-            else
-            {
-                transform.localScale = new Vector3(value / 10, value / 10, value / 10);   
-            }
-
         }
     }
 }
