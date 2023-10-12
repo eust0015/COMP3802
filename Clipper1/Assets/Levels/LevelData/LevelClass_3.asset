@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: LevelClass_3
   m_EditorClassIdentifier: 
   levelName: Level3
-  sceneAsset: {fileID: 102900000, guid: b91a75adf8268b847be3c42f7079678d, type: 3}
+  sceneAsset: {fileID: 102900000, guid: 5c3876229eacddf4780dc373b520bb94, type: 3}

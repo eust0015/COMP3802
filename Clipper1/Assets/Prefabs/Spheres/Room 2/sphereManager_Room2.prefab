@@ -46,9 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationTime: 10
   spheres:
-  - {fileID: 611492238425980230, guid: 319b0e02c03e302418ad519ab49c8f83, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  currentSphere: {fileID: 611492238425980230, guid: a63e31d20784a9b40b2a09deebdcb2b7, type: 3}
+  - {fileID: 3334281224117735443, guid: 1e819a1e5443a7647a51f6a7c444ce68, type: 3}
+  currentSphere: {fileID: 3334281224117735443, guid: 1e819a1e5443a7647a51f6a7c444ce68, type: 3}
