@@ -11,7 +11,7 @@ namespace UI
         [SerializeField] private RectTransform transformToScale;
         [SerializeField] private Slider slider;
         [SerializeField] private TextMeshProUGUI valueText;
-        [SerializeField] private float scaleMultiplier;
+        [SerializeField] private float initialScale;
 
         private void OnEnable()
         {
@@ -25,14 +25,15 @@ namespace UI
 
         private void Start()
         {
-            valueText.text = "x" + (slider.value * scaleMultiplier).ToString("0.#");
+            initialScale = transformToScale.localScale.x;
+            valueText.text = "x" + (slider.value).ToString("0.#");
         }
 
         private void UpdateScale(float value)
         {
-            //float newScale = 0f + value / 1000f;
-            transformToScale.localScale = new Vector3(value, value, value);
-            valueText.text = "x" + (value * scaleMultiplier).ToString("0.#");
+            float newScale = initialScale * value;
+            transformToScale.localScale = new Vector3(newScale, newScale, newScale);
+            valueText.text = "x" + (value).ToString("0.#");
         }
     }
 }

@@ -1292,14 +1292,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9183098563894800720}
     m_Modifications:
-    - target: {fileID: 4468830736636203795, guid: 4dd1f2833e5e6724eb3378565f65dc29, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4468830737005359898, guid: 4dd1f2833e5e6724eb3378565f65dc29, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4791311157326001419, guid: 4dd1f2833e5e6724eb3378565f65dc29, type: 3}
       propertyPath: m_Name
       value: ScaleSlider

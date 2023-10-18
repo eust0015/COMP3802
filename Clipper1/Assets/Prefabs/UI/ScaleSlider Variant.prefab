@@ -126,15 +126,15 @@ PrefabInstance:
       objectReference: {fileID: -3779477439981978931, guid: 2bb0e77ba776ce644a35096e1c2bfb60, type: 2}
     - target: {fileID: 7081840892515873890, guid: 41d89b59fe3e9964a83686ff24b7d0c5, type: 3}
       propertyPath: m_Value
-      value: 0.001
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7081840892515873890, guid: 41d89b59fe3e9964a83686ff24b7d0c5, type: 3}
       propertyPath: m_MaxValue
-      value: 0.01
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7081840892515873890, guid: 41d89b59fe3e9964a83686ff24b7d0c5, type: 3}
       propertyPath: m_MinValue
-      value: 0.001
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7081840892515873890, guid: 41d89b59fe3e9964a83686ff24b7d0c5, type: 3}
       propertyPath: m_WholeNumbers
