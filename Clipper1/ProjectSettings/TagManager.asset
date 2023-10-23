@@ -8,6 +8,8 @@ TagManager:
   - LevelData
   - LevelManager
   - SphereManager
+  - SphereTooltip
+  - XROrigin
   layers:
   - Default
   - TransparentFX

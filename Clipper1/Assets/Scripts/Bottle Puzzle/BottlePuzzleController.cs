@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.UI;
 using UnityEngine.XR.Interaction.Toolkit;
 
 // TODO: Add the ability to move the object away using the joystick
 
-public class FiniteMovementController : XRSimpleInteractable {
+public class BottlePuzzleController : XRSimpleInteractable {
 
     // Material to switch to that has 
     public Material outlinedMaterial;
@@ -122,6 +123,8 @@ public class FiniteMovementController : XRSimpleInteractable {
 
         voodooObject.transform.position = endPos;
         voodooLerped = true;
+
+        Debug.Log("Bottle Puzzle Code is: blahblah");
     }
     
     private IEnumerator FiniteTranslation() {
@@ -148,11 +151,6 @@ public class FiniteMovementController : XRSimpleInteractable {
                         // Positional change of the interacting controller
                         Vector3 interactorPositionDelta =
                             interactorRef.gameObject.transform.position - interactorLastPosition;
-                        
-                        // Update the position such that it is adjusted 1:1 with the interacting controller
-                        Vector3 thisCurrentPosition = this.transform.position;
-                        Vector3 thisNewPosition = thisCurrentPosition + interactorPositionDelta;
-                        this.transform.gameObject.transform.position = thisNewPosition;
 
                         // Update the voodoos position such that it is adjusted 1:1 with the interacting controller
                         if (voodooLerped) {
@@ -166,7 +164,6 @@ public class FiniteMovementController : XRSimpleInteractable {
                     // Set the interatorStartPosition variable
                     interactorLastPosition = interactorRef.gameObject.transform.position;
                     lastPosSet = true;
-                    //Debug.Log("Interactor Start Position: " + interactorLastPosition.x + ", " + interactorLastPosition.y + ", " + interactorLastPosition.z);
                 }
             }
             
