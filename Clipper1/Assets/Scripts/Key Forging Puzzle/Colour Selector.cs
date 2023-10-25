@@ -17,7 +17,6 @@ public class ColourSelector : MonoBehaviour
 
     public void changeMaterial(int panelNo, int direction)
     {
-        Debug.Log("Working");
         if (panelNo == 1)
         {
             selector1.GetComponent<MaterialManager>().ChangeMaterial(direction);
