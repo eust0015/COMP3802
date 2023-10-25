@@ -5,7 +5,7 @@ using UnityEngine;
 public class SphereManager : MonoBehaviour {
 
     [SerializeField]
-    private float rotationTime = 10;
+    //private float rotationTime = 10;
     
     public GameObject[] spheres;
     private Vector3 spherePosition;
