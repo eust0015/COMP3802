@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/360 Testing Scene.unity
     guid: 16b4ba33979662747a2285d2bacf43fa
   - enabled: 0
@@ -23,10 +23,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene(EditedByAdam).unity
     guid: b7ff5644e18732c43b9b6f4a9daecd0a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Rooms/Room 1.unity
     guid: 409c59a96c903c8418f20a26f3b3e08e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Rooms/Room 2.unity
     guid: b0a3e8a7e7a0e484bb095e434cc5d289
   - enabled: 1
