@@ -6,10 +6,12 @@ public class LockScript : MonoBehaviour
 {
     private bool locked = true;
     public GameObject lockBottom;
+    public GameObject lockTop;
     public GameObject key;
     public int keyHandle = 2;
     public int keyShaft = 2;
     public int keyTeeth = 2;
+    public float fadeTime = 10.0f;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -19,6 +21,9 @@ public class LockScript : MonoBehaviour
             {
                 locked = false;
                 lockBottom.GetComponent<Rigidbody>().useGravity = true;
+                lockBottom.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+                //lockBottom.GetComponent<MeshRenderer>().material.color = Color.Lerp(lockBottom.GetComponent<MeshRenderer>().material.color, lockBottom.GetComponent<MeshRenderer>().material.color, fadeTime * Time.deltaTime);
+                //lockTop.GetComponent<MeshRenderer>().material.color = Color.Lerp(lockTop.GetComponent<MeshRenderer>().material.color, lockTop.GetComponent<MeshRenderer>().material.color, fadeTime * Time.deltaTime);
             }
         }
     }
