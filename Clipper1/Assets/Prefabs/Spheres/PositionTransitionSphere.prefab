@@ -498,6 +498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaleFactor: 0.175
+  tooltipYOffset: 1
 --- !u!114 &1784250083759080005
 MonoBehaviour:
   m_ObjectHideFlags: 0

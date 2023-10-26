@@ -5,8 +5,29 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 // TODO: Add the ability to move the object away using the joystick
 
+public enum TranslationType{
+    Calculated,
+    ParentBased
+}
+
 public class FiniteMovementController : XRSimpleInteractable {
 
+    // The type of translation that will occur
+    public TranslationType transType = TranslationType.Calculated;
+    
+    // Whether the voodoo should be made or not (only works with transType = Calculated)
+    public bool makeVoodoo = true;
+    
+    // The maximum distance this can be reached in
+    public float selectDistance = 50f;
+    
+    // If the object is selected or hovered
+    private bool selected = false;
+    private bool hovered = false;
+    
+    // The original parent of this object
+    private Transform initParent;
+    
     // Material to switch to that has 
     public Material outlinedMaterial;
     private Material originalMaterial;
@@ -27,39 +48,130 @@ public class FiniteMovementController : XRSimpleInteractable {
     private XRBaseInteractor interactorRef;
     private Vector3 interactorLastPosition;
 
+    private bool ControllerCloseEnough() {
+
+        bool closeEnough = false;
+
+        // Find the controller
+        XRBaseControllerInteractor controllerInteractor = firstInteractorSelecting as XRBaseControllerInteractor;
+        
+        // Check that the controller referenced exists
+        if (controllerInteractor != null) {
+
+            // Check the distance to the object
+            float distance = Vector3.Distance(controllerInteractor.transform.position, transform.position);
+            if (distance <= selectDistance) {
+
+                return true;
+            }
+        }
+        
+        return closeEnough;
+    }    
+    
     // Called by XRSimpleInteractable when object is selected
     public void ObjectSelected() {
 
-        // Start the voodoo coroutine
-        voodooCoroutine = VoodooTranslation();
-        StartCoroutine(voodooCoroutine);
+        // Before continuing ensure the controller is close enough
+        if (!ControllerCloseEnough()) {
+            
+            return;
+        }
+
+        selected = true;
+
+        // Turn off any rigidbody so it doesnt take gravity
+        Rigidbody rb = GetComponent<Rigidbody>();
+        if (rb != null) {
+
+            rb.isKinematic = true;
+        }
+
+        if (transType == TranslationType.Calculated) {
+            
+            // Start the voodoo coroutine
+            if (makeVoodoo) {
+                voodooCoroutine = VoodooTranslation();
+                StartCoroutine(voodooCoroutine);
+            }
+            
+            // Starts the FiniteTranslation coroutine that is responsible for object translation
+            finiteMovementCoroutine = FiniteTranslation();
+            StartCoroutine(finiteMovementCoroutine);
+        }else if (transType == TranslationType.ParentBased) {
+
+            // Set the initial parent
+            if (initParent == null) {
+
+                initParent = transform.parent;
+            }
+            
+            // Parent the object to the xr controller
+            // Find the controller
+            XRBaseControllerInteractor controllerInteractor = firstInteractorSelecting as XRBaseControllerInteractor;
         
-        // Starts the FiniteTranslation coroutine that is responsible for object translation
-        finiteMovementCoroutine = FiniteTranslation();
-        StartCoroutine(finiteMovementCoroutine);
+            // Check that the controller referenced exists
+            if (controllerInteractor != null) {
+
+                this.transform.parent = controllerInteractor.transform;
+            }
+        }
+
+        
     }
 
     // Called by XRSimpleInteractable when object is de-selected
     public void ObjectDeselected() {
+
+        // Make sure that the object has already been selected else return
+        if (!selected) {
+
+            return;
+        }
         
-        // Stops the FiniteTranslation coroutine that is responsible for object translation
-        StopCoroutine(finiteMovementCoroutine);
+        selected = false;
+
+        if (transType == TranslationType.Calculated) {
+            
+            // Stops the FiniteTranslation coroutine that is responsible for object translation
+            StopCoroutine(finiteMovementCoroutine);
+            
+            // Reset voodoo variables
+            voodooLerpedTime = 0.0f;
+            voodooLerped = false;
+            voodooStartPos = Vector3.zero;
+            
+            // Delete the voodoo Object
+            Destroy(voodooObject);
         
-        // Reset voodooLerpedTime
-        voodooLerpedTime = 0.0f;
-        voodooLerped = false;
-        voodooStartPos = Vector3.zero;
-        
-        // Delete the voodoo Object
-        Destroy(voodooObject);
-        
-        // Cancel the voodoo coroutine
-        StopCoroutine(voodooCoroutine);
+            // Cancel the voodoo coroutine
+            StopCoroutine(voodooCoroutine);
+        }else if (transType == TranslationType.ParentBased) {
+            
+            // Set the parent back to the initial parent
+            transform.parent = initParent;
+        }
+
+        // Turn on any rigidbody so it does take gravity
+        Rigidbody rb = GetComponent<Rigidbody>();
+        if (rb != null) {
+
+            rb.isKinematic = false;
+        }
+
     }
     
     // Called by XRSimpleInteractable when object is Hovered
     public void ObjectHover() {
 
+        // Before continuing ensure the controller is close enough
+        if (!ControllerCloseEnough()) {
+            
+            return;
+        }
+
+        hovered = true;
+        
         originalMaterial = this.GetComponentInChildren<MeshRenderer>().material;
         this.GetComponentInChildren<MeshRenderer>().material = outlinedMaterial;
         
@@ -77,6 +189,14 @@ public class FiniteMovementController : XRSimpleInteractable {
     
     // Called by XRSimpleInteractable when object is Un-Hovered
     public void ObjectUnhover() {
+        
+        // Make sure that the object has already been hovered else return
+        if (!hovered) {
+
+            return;
+        }
+
+        hovered = false;
         
         this.GetComponentInChildren<MeshRenderer>().material = originalMaterial;
     }
@@ -123,7 +243,7 @@ public class FiniteMovementController : XRSimpleInteractable {
         voodooObject.transform.position = endPos;
         voodooLerped = true;
     }
-    
+
     private IEnumerator FiniteTranslation() {
 
         // Just so that this object is not translated on first itteration (until lastPositionIsSet)
