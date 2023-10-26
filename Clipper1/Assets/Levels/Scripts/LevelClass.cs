@@ -9,9 +9,9 @@ public class LevelClass : ScriptableObject {
     [SerializeField]
     private String levelName;
     [SerializeField]
-    private UnityEditor.SceneAsset sceneAsset;
+    private string sceneName;
 
     public string GetSceneName() {
-        return sceneAsset.name;
+        return sceneName;
     }
 }
