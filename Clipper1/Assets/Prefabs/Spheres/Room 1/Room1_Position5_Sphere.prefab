@@ -92,7 +92,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4362082637564536206, guid: 43d3d7f51535d5845ad4cdac32e4a5c0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4362082637564536206, guid: 43d3d7f51535d5845ad4cdac32e4a5c0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -218,7 +218,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 141081893224482001, guid: 260f13c9e2a936a4ea2469f292a266ca, type: 3}
       propertyPath: index
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1889060403222105491, guid: 260f13c9e2a936a4ea2469f292a266ca, type: 3}
       propertyPath: m_Name
@@ -268,6 +268,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8606995885110769646, guid: 260f13c9e2a936a4ea2469f292a266ca, type: 3}
+      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5614897709148338949}
+    - target: {fileID: 8606995885110769646, guid: 260f13c9e2a936a4ea2469f292a266ca, type: 3}
+      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: move
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606995885110769646, guid: 260f13c9e2a936a4ea2469f292a266ca, type: 3}
+      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SphereUIObjectLevelTransition, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -278,6 +290,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7935834721282206527, guid: 260f13c9e2a936a4ea2469f292a266ca, type: 3}
   m_PrefabInstance: {fileID: 5483456402595938260}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5614897709148338949 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 141081893224482001, guid: 260f13c9e2a936a4ea2469f292a266ca, type: 3}
+  m_PrefabInstance: {fileID: 5483456402595938260}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27fbc9423a1e22f4492c178b745c9261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5918212405800373743
 PrefabInstance:
   m_ObjectHideFlags: 0
