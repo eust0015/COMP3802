@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: LevelClass_TestScene
   m_EditorClassIdentifier: 
   levelName: Testing Scene
-  sceneAsset: {fileID: 102900000, guid: 16b4ba33979662747a2285d2bacf43fa, type: 3}
+  sceneName: 360 Testing Scene
