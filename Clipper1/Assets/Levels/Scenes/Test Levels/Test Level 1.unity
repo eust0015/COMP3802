@@ -2842,11 +2842,50 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.215
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4355803494974515217, guid: 7c7c14767d3a6514385c65e7569a5a0e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1095629975024994478, guid: 7c7c14767d3a6514385c65e7569a5a0e, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 2028122980640597201}
   m_SourcePrefab: {fileID: 100100000, guid: 7c7c14767d3a6514385c65e7569a5a0e, type: 3}
+--- !u!4 &2028122980640597197 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2643793741012502910, guid: 7c7c14767d3a6514385c65e7569a5a0e, type: 3}
+  m_PrefabInstance: {fileID: 2028122980640597196}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &2028122980640597198 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8872997653586541804, guid: 7c7c14767d3a6514385c65e7569a5a0e, type: 3}
+  m_PrefabInstance: {fileID: 2028122980640597196}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2028122980640597199 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6165866282602116163, guid: 7c7c14767d3a6514385c65e7569a5a0e, type: 3}
+  m_PrefabInstance: {fileID: 2028122980640597196}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2028122980640597200 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1095629975024994478, guid: 7c7c14767d3a6514385c65e7569a5a0e, type: 3}
+  m_PrefabInstance: {fileID: 2028122980640597196}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2028122980640597201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028122980640597200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6344585de67b40d4d9df5306fe0a79f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltip: {fileID: 2028122980640597198}
+  resetButton: {fileID: 2028122980640597197}
+  bottlesParent: {fileID: 2028122980640597199}
 --- !u!1001 &2357212752999097202
 PrefabInstance:
   m_ObjectHideFlags: 0
