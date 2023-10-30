@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5823722671539633713}
   - component: {fileID: 1824978073405167025}
   m_Layer: 0
-  m_Name: sphereManager_Room2
+  m_Name: sphereManager_Room2_Front
   m_TagString: SphereManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,5 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationTime: 10
   spheres:
-  - {fileID: 3334281224117735443, guid: 1e819a1e5443a7647a51f6a7c444ce68, type: 3}
-  currentSphere: {fileID: 3334281224117735443, guid: 1e819a1e5443a7647a51f6a7c444ce68, type: 3}
+  - {fileID: 2506159361519578715, guid: fcb6216c8690fe64d89631491c9520f2, type: 3}
+  - {fileID: 8729596629974572114, guid: 0f10ab4cc1874e243b5cd53e11bbd5d5, type: 3}
+  - {fileID: 3647298704705170934, guid: 3464eb483f5979341b1d0e399f17dd63, type: 3}
+  - {fileID: 461771579750224628, guid: 743ff2c3c116c7646ba54228e657eef0, type: 3}
+  - {fileID: 6597280412716239714, guid: afd6e9338bd8c684c94ed358485760ce, type: 3}
+  - {fileID: 0}
+  currentSphere: {fileID: 0}
