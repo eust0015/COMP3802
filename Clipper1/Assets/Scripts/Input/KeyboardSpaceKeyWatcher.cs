@@ -3,12 +3,12 @@ using UnityEngine.InputSystem;
 
 namespace Input
 {
-    public class KeyboardMenuButtonWatcher : MonoBehaviour
+    public class KeyboardSpaceKeyWatcher : MonoBehaviour
     {
         public delegate void PressEvent(bool pressed);
         public static event PressEvent OnPress;
         
-        public static KeyboardMenuButtonWatcher Instance { get; private set; }
+        public static KeyboardSpaceKeyWatcher Instance { get; private set; }
         
         private void Awake()
         {
@@ -25,7 +25,7 @@ namespace Input
         
         private void Update()
         {
-            if (Keyboard.current.escapeKey.wasPressedThisFrame)
+            if (Keyboard.current.spaceKey.wasPressedThisFrame)
             {
                 OnPress?.Invoke(true);
             }

@@ -4,12 +4,12 @@ using UnityEngine.XR;
 
 namespace Input
 {
-    public class XRMenuButtonWatcher : MonoBehaviour
+    public class XRPrimaryButtonWatcher : MonoBehaviour
     {
         public delegate void PressEvent(bool pressed);
         public static event PressEvent OnPress;
 
-        public static XRMenuButtonWatcher Instance { get; private set; }
+        public static XRPrimaryButtonWatcher Instance { get; private set; }
         private bool lastButtonState = false;
         private List<InputDevice> devicesWithInput;
 
@@ -49,9 +49,9 @@ namespace Input
         private void InputDevices_deviceConnected(InputDevice device)
         {
             bool discardedValue;
-            if (device.TryGetFeatureValue(CommonUsages.menuButton, out discardedValue))
+            if (device.TryGetFeatureValue(CommonUsages.primaryButton, out discardedValue))
             {
-                devicesWithInput.Add(device); // Add any devices that have  the type of input.
+                devicesWithInput.Add(device); // Add any devices that have the type of input.
             }
         }
 
@@ -67,7 +67,7 @@ namespace Input
             foreach (var device in devicesWithInput)
             {
                 bool inputState = false;
-                tempState = device.TryGetFeatureValue(CommonUsages.menuButton, out inputState) // did get a value
+                tempState = device.TryGetFeatureValue(CommonUsages.primaryButton, out inputState) // did get a value
                             && inputState // the value we got
                             || tempState; // cumulative result from other controllers
             }
