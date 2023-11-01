@@ -15,14 +15,14 @@ namespace UI
         {
             ContinueButton.OnClick += Hide;
             XRMenuButtonWatcher.OnPress += OnMenuButtonEvent;
-            KeyboardMenuButtonWatcher.OnPress += OnMenuButtonEvent;
+            KeyboardEscapeKeyWatcher.OnPress += OnMenuButtonEvent;
         }
 
         private void OnDestroy()
         {
             ContinueButton.OnClick -= Hide;
             XRMenuButtonWatcher.OnPress -= OnMenuButtonEvent;
-            KeyboardMenuButtonWatcher.OnPress -= OnMenuButtonEvent;
+            KeyboardEscapeKeyWatcher.OnPress -= OnMenuButtonEvent;
         }
         
         private void Hide()

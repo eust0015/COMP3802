@@ -11,7 +11,7 @@ namespace Input
 
         public static XRMenuButtonWatcher Instance { get; private set; }
         private bool lastButtonState = false;
-        private List<InputDevice> devicesWithMenuButton;
+        private List<InputDevice> devicesWithInput;
 
         private void Awake()
         {
@@ -25,7 +25,7 @@ namespace Input
                 Instance = this; 
             } 
             
-            devicesWithMenuButton = new List<InputDevice>();
+            devicesWithInput = new List<InputDevice>();
         }
 
         private void Start()
@@ -43,7 +43,7 @@ namespace Input
         {
             InputDevices.deviceConnected -= InputDevices_deviceConnected;
             InputDevices.deviceDisconnected -= InputDevices_deviceDisconnected;
-            devicesWithMenuButton.Clear();
+            devicesWithInput.Clear();
         }
 
         private void InputDevices_deviceConnected(InputDevice device)
@@ -51,24 +51,24 @@ namespace Input
             bool discardedValue;
             if (device.TryGetFeatureValue(CommonUsages.menuButton, out discardedValue))
             {
-                devicesWithMenuButton.Add(device); // Add any devices that have a menu button.
+                devicesWithInput.Add(device); // Add any devices that have  the type of input.
             }
         }
 
         private void InputDevices_deviceDisconnected(InputDevice device)
         {
-            if (devicesWithMenuButton.Contains(device))
-                devicesWithMenuButton.Remove(device);
+            if (devicesWithInput.Contains(device))
+                devicesWithInput.Remove(device);
         }
 
         private void Update()
         {
             bool tempState = false;
-            foreach (var device in devicesWithMenuButton)
+            foreach (var device in devicesWithInput)
             {
-                bool menuButtonState = false;
-                tempState = device.TryGetFeatureValue(CommonUsages.menuButton, out menuButtonState) // did get a value
-                            && menuButtonState // the value we got
+                bool inputState = false;
+                tempState = device.TryGetFeatureValue(CommonUsages.menuButton, out inputState) // did get a value
+                            && inputState // the value we got
                             || tempState; // cumulative result from other controllers
             }
 
