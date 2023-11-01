@@ -12,13 +12,18 @@ public class LockScript : MonoBehaviour
     public int keyShaft = 2;
     public int keyTeeth = 2;
     public float fadeTime = 10.0f;
-
+    public AudioClip lockSound;
+    public AudioClip solveSound;
+    public AudioSource audioSource;
+    
     private void OnTriggerEnter(Collider other)
     {
         if(other == key.GetComponent<SphereCollider>())
         {
             if(key.GetComponent<KeyForging>().handle == keyHandle && key.GetComponent<KeyForging>().shaft == keyShaft && key.GetComponent<KeyForging>().teeth == keyTeeth)
             {
+                audioSource.PlayOneShot(lockSound);
+                audioSource.PlayOneShot(solveSound);
                 locked = false;
                 lockBottom.GetComponent<Rigidbody>().useGravity = true;
                 lockBottom.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;

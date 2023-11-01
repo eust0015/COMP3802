@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class KeyForging : MonoBehaviour
 {
     public GameObject selector1;
@@ -13,6 +14,8 @@ public class KeyForging : MonoBehaviour
     public GameObject goldKey;
     public GameObject silverKey;
     public GameObject ironKey;
+    public AudioClip anvilSound;
+    public AudioSource audioSource;
 
     private int cycle = 1;
     public int handle = 0;
@@ -24,6 +27,8 @@ public class KeyForging : MonoBehaviour
     {
         if (other == hammer.GetComponent<BoxCollider>())
         {
+            audioSource.PlayOneShot(anvilSound);
+
             switch(cycle)
             {
                 case 2://shaft
