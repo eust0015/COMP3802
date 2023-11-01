@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: SphereTooltip
       objectReference: {fileID: 0}
+    - target: {fileID: 248920188242340134, guid: e8c33d84a47792e4086f965533a9407a, type: 3}
+      propertyPath: m_text
+      value: Point at sphere and press bumper to teleport.
+      objectReference: {fileID: 0}
     - target: {fileID: 1653178084850329592, guid: e8c33d84a47792e4086f965533a9407a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -139,7 +143,7 @@ PrefabInstance:
     - target: {fileID: 5804380176937727081, guid: e8c33d84a47792e4086f965533a9407a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -876546973899608171, guid: aa559ee81c9862647aa404c66ac392dd, type: 3}
+      objectReference: {fileID: 2100000, guid: a1c1d11b32e0a6e4084e16fea6027537, type: 2}
     - target: {fileID: 5977745296309352971, guid: e8c33d84a47792e4086f965533a9407a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -199,7 +203,7 @@ PrefabInstance:
     - target: {fileID: 6211227295332304585, guid: e8c33d84a47792e4086f965533a9407a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -876546973899608171, guid: aa559ee81c9862647aa404c66ac392dd, type: 3}
+      objectReference: {fileID: 2100000, guid: a1c1d11b32e0a6e4084e16fea6027537, type: 2}
     - target: {fileID: 7510101200371293548, guid: e8c33d84a47792e4086f965533a9407a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -212,6 +216,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7730761600870568994, guid: e8c33d84a47792e4086f965533a9407a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -876546973899608171, guid: aa559ee81c9862647aa404c66ac392dd, type: 3}
+    - target: {fileID: 7923755764832921218, guid: e8c33d84a47792e4086f965533a9407a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -876546973899608171, guid: aa559ee81c9862647aa404c66ac392dd, type: 3}
     - target: {fileID: 8008473282598767766, guid: e8c33d84a47792e4086f965533a9407a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.3
