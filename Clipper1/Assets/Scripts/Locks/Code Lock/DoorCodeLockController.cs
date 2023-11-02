@@ -6,6 +6,7 @@ using UnityEngine;
 public class DoorCodeLockController : CodeLockController {
 
     public GameObject door;
+    public GameObject transitionSphere;
     public AudioClip lockNoise;
     public AudioClip openCloseNoise;
     private float openAmount = 60.0f; // Amount of degrees to open the door
@@ -16,6 +17,14 @@ public class DoorCodeLockController : CodeLockController {
 
     private void OpenDoor() {
 
+        // Check if there is a puzzleTransitionPreventer
+        PuzzleTransitionPreventer puzzleTransitionPreventer = transitionSphere.GetComponent<PuzzleTransitionPreventer>();
+        if (puzzleTransitionPreventer != null) {
+            
+            // Since there is we should update it so it doesnt prevent
+            puzzleTransitionPreventer.SetPuzzleComplete(true);
+        }
+        
         doorRotationCoroutine = DoorRotation(-openAmount);
         StartCoroutine(doorRotationCoroutine);
         Unlock();   
@@ -23,6 +32,14 @@ public class DoorCodeLockController : CodeLockController {
 
     private void CloseDoor() {
 
+        // Check if there is a puzzleTransitionPreventer
+        PuzzleTransitionPreventer puzzleTransitionPreventer = transitionSphere.GetComponent<PuzzleTransitionPreventer>();
+        if (puzzleTransitionPreventer != null) {
+            
+            // Since there is we should update it so it prevents
+            puzzleTransitionPreventer.SetPuzzleComplete(false);
+        }
+        
         doorRotationCoroutine = DoorRotation(openAmount);
         StartCoroutine(doorRotationCoroutine);
         Lock();

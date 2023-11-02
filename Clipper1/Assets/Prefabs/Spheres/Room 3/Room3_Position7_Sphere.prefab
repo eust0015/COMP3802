@@ -378,8 +378,28 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5260210153973673192, guid: 43d3d7f51535d5845ad4cdac32e4a5c0, type: 3}
       insertIndex: 0
       addedObject: {fileID: 4895442643637899649}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9089487874232734860, guid: 43d3d7f51535d5845ad4cdac32e4a5c0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7994467472855386042}
   m_SourcePrefab: {fileID: 100100000, guid: 43d3d7f51535d5845ad4cdac32e4a5c0, type: 3}
+--- !u!1 &816145911276559081 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9089487874232734860, guid: 43d3d7f51535d5845ad4cdac32e4a5c0, type: 3}
+  m_PrefabInstance: {fileID: 8464464311876193893}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7994467472855386042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816145911276559081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0c1c042027100f4e922854d8adf612e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &4357184475933368973 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5260210153973673192, guid: 43d3d7f51535d5845ad4cdac32e4a5c0, type: 3}
@@ -1838,6 +1858,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5970161194879245603, guid: 3c3980b660405ba4e84b2df2f31342ab, type: 3}
+      propertyPath: transitionSphere
+      value: 
+      objectReference: {fileID: 816145911276559081}
+    - target: {fileID: 5970161194879245603, guid: 3c3980b660405ba4e84b2df2f31342ab, type: 3}
+      propertyPath: puzzleTransitionPreventer
+      value: 
+      objectReference: {fileID: 7994467472855386042}
     - target: {fileID: 6019946183320959561, guid: 3c3980b660405ba4e84b2df2f31342ab, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

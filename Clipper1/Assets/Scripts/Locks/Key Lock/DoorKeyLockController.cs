@@ -7,6 +7,7 @@ using UnityEngine;
 public class DoorKeyLockController : KeyLockController {
 
     public GameObject door;
+    public GameObject transitionSphere;
     public AudioClip lockNoise;
     public AudioClip openCloseNoise;
     public int keyID; // Must match that which is on the key entering it
@@ -18,12 +19,28 @@ public class DoorKeyLockController : KeyLockController {
 
     private void OpenDoor() {
 
+        // Check if there is a puzzleTransitionPreventer
+        PuzzleTransitionPreventer puzzleTransitionPreventer = transitionSphere.GetComponent<PuzzleTransitionPreventer>();
+        if (puzzleTransitionPreventer != null) {
+            
+            // Since there is we should update it so it doesnt prevent
+            puzzleTransitionPreventer.SetPuzzleComplete(true);
+        }
+        
         doorRotationCoroutine = DoorRotation(-openAmount);
         StartCoroutine(doorRotationCoroutine);
         Unlock();   
     }
 
     private void CloseDoor() {
+        
+        // Check if there is a puzzleTransitionPreventer
+        PuzzleTransitionPreventer puzzleTransitionPreventer = transitionSphere.GetComponent<PuzzleTransitionPreventer>();
+        if (puzzleTransitionPreventer != null) {
+            
+            // Since there is we should update it so it prevents
+            puzzleTransitionPreventer.SetPuzzleComplete(false);
+        }
         
         doorRotationCoroutine = DoorRotation(openAmount);
         StartCoroutine(doorRotationCoroutine);
