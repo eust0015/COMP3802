@@ -1,18 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ToolTipSphere : MonoBehaviour
+namespace UI
 {
-    // Start is called before the first frame update
-    void Start()
+    public class ToolTipSphere : MonoBehaviour
     {
+        public static bool IsEnabled = true;
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        public void Display()
+        {
+            if (!IsEnabled) return;
+            gameObject.SetActive(true);
+        }
         
+        public void Hide()
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

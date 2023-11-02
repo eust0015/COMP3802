@@ -10,7 +10,7 @@ namespace Unity.VRTemplate
     [RequireComponent(typeof(Toggle))]
     public class BooleanToggleVisualsController : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
-        const float k_TargetPositionX = 17f;
+        [SerializeField] private float k_TargetPositionX = 17f;
 
 #pragma warning disable 649
         [SerializeField, Tooltip("The boolean toggle knob.")]
