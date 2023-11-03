@@ -14,13 +14,17 @@ public class Fruit : MonoBehaviour {
     // Holds the type of the fruit
     public FruitType type;
 
+    // Holds if the fruit is in the bowl or not
+    private bool inBowl = false;
+
     public void OnTriggerEnter(Collider other) {
 
         // Check if the collider is from the fruit bowl
         FruitBowlController fbc = other.gameObject.GetComponent<FruitBowlController>();
-        if(fbc != null) {
-            
-            fbc.AddFruit(type);
+        if(fbc != null && !inBowl) {
+
+            inBowl = !inBowl;
+            fbc.AddFruit(this);
         }
     }
 
@@ -28,9 +32,10 @@ public class Fruit : MonoBehaviour {
         
         // Check if the collider is from the fruit bowl
         FruitBowlController fbc = other.gameObject.GetComponent<FruitBowlController>();
-        if(fbc != null) {
+        if(fbc != null && inBowl) {
             
-            fbc.RemoveFruit(type);
+            inBowl = !inBowl;
+            fbc.RemoveFruit(this);
         }
     }
 }

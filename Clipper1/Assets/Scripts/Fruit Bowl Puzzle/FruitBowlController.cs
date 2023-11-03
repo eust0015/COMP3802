@@ -9,6 +9,8 @@ public class FruitBowlController : MonoBehaviour {
     public int targetApples = -1;
     public int targetBananas = -1;
     public int targetOranges = -1;
+
+    private HashSet<Fruit> fruitHashSet = new HashSet<Fruit>();
     
     // List of the planks to destroy when puzzle is solved
     public List<GameObject> planks;
@@ -28,7 +30,6 @@ public class FruitBowlController : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
-        Debug.Log((fruitCounts[0]/4) + ", " + (fruitCounts[1]/4) + ", " + (fruitCounts[2]/4));
         
         if (!solved && FruitsMatchTargets()) {
             
@@ -51,16 +52,37 @@ public class FruitBowlController : MonoBehaviour {
 
     public bool FruitsMatchTargets() {
 
-        return (fruitCounts[0] / 4) == targetApples && (fruitCounts[1] / 4) == targetBananas && (fruitCounts[2] / 4) == targetOranges;
+        int apples = 0;
+        int bananas = 0;
+        int oranges = 0;
+        
+        // Count each fruit type in the fruitHashset
+        foreach (Fruit f in fruitHashSet) {
+
+            switch (f.type) {
+                case FruitType.Apple:
+                    apples++;
+                    break;
+                case FruitType.Banana:
+                    bananas++;
+                    break;
+                case FruitType.Orange:
+                    oranges++;
+                    break;
+            }
+        }
+
+        Debug.Log(apples + ", " + bananas + ", " + oranges);
+        return apples == targetApples && bananas == targetBananas && oranges == targetOranges;
     }
     
-    public void AddFruit(FruitType fruitType) {
+    public void AddFruit(Fruit f_) {
 
-        fruitCounts[(int)fruitType]++;
+        fruitHashSet.Add(f_);
     }
 
-    public void RemoveFruit(FruitType fruitType) {
-        
-        fruitCounts[(int)fruitType]--;
+    public void RemoveFruit(Fruit f_) {
+
+        fruitHashSet.Remove(f_);
     }
 }

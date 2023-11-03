@@ -262,11 +262,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4362082637564536206, guid: 43d3d7f51535d5845ad4cdac32e4a5c0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.66
+      value: 15.26
       objectReference: {fileID: 0}
     - target: {fileID: 4362082637564536206, guid: 43d3d7f51535d5845ad4cdac32e4a5c0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.67
+      value: 1.49
       objectReference: {fileID: 0}
     - target: {fileID: 4362082637564536206, guid: 43d3d7f51535d5845ad4cdac32e4a5c0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -366,6 +366,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7307261208829110492, guid: 43d3d7f51535d5845ad4cdac32e4a5c0, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7481107590781167975, guid: 43d3d7f51535d5845ad4cdac32e4a5c0, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9089487874232734860, guid: 43d3d7f51535d5845ad4cdac32e4a5c0, type: 3}
@@ -1792,7 +1796,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5800716791607688960, guid: 3c3980b660405ba4e84b2df2f31342ab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.19
       objectReference: {fileID: 0}
     - target: {fileID: 5800716791607688960, guid: 3c3980b660405ba4e84b2df2f31342ab, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2422,7 +2426,13 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2240103226797886511, guid: 3c3980b660405ba4e84b2df2f31342ab, type: 3}
+    - {fileID: 2891609103820765194, guid: 3c3980b660405ba4e84b2df2f31342ab, type: 3}
+    - {fileID: 8905245383977301066, guid: 3c3980b660405ba4e84b2df2f31342ab, type: 3}
+    - {fileID: 3862693141852435213, guid: 3c3980b660405ba4e84b2df2f31342ab, type: 3}
+    - {fileID: 5070639667481084720, guid: 3c3980b660405ba4e84b2df2f31342ab, type: 3}
+    - {fileID: 7413772661713293971, guid: 3c3980b660405ba4e84b2df2f31342ab, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
