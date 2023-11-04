@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 689195282339216291}
   - component: {fileID: 2065741477291852021}
-  - component: {fileID: 7348294372414838688}
+  - component: {fileID: 5492874367012821948}
+  - component: {fileID: 8498720734060244993}
   m_Layer: 0
-  m_Name: PuzzleBottle
+  m_Name: Bottle Var 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,7 +34,7 @@ Transform:
   m_Children:
   - {fileID: 4849538448219264879}
   - {fileID: 1541714127896528052}
-  - {fileID: 2830070833765821152}
+  - {fileID: 3636776571657773252}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &2065741477291852021
@@ -63,7 +64,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7348294372414838688
+--- !u!114 &5492874367012821948
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72,7 +73,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 958221581846802999}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 827318d03237c5a42b383ce6c09222c6, type: 3}
+  m_Script: {fileID: 11500000, guid: c930499edb30f8b408da8b32002b52e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &8498720734060244993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958221581846802999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5a46c1241ac8914982915bdf2c6bec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -102,9 +116,21 @@ MonoBehaviour:
   m_HoverEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7348294372414838688}
-        m_TargetAssemblyTypeName: BottlePuzzleController, Assembly-CSharp
+      - m_Target: {fileID: 8498720734060244993}
+        m_TargetAssemblyTypeName: FiniteMovementController, Assembly-CSharp
         m_MethodName: ObjectHover
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3784940943499572749}
+        m_TargetAssemblyTypeName: UI.ToolTipPickup, Assembly-CSharp
+        m_MethodName: Display
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -117,9 +143,21 @@ MonoBehaviour:
   m_HoverExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7348294372414838688}
-        m_TargetAssemblyTypeName: BottlePuzzleController, Assembly-CSharp
+      - m_Target: {fileID: 8498720734060244993}
+        m_TargetAssemblyTypeName: FiniteMovementController, Assembly-CSharp
         m_MethodName: ObjectUnhover
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3784940943499572749}
+        m_TargetAssemblyTypeName: UI.ToolTipPickup, Assembly-CSharp
+        m_MethodName: Hide
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -138,8 +176,8 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7348294372414838688}
-        m_TargetAssemblyTypeName: BottlePuzzleController, Assembly-CSharp
+      - m_Target: {fileID: 8498720734060244993}
+        m_TargetAssemblyTypeName: FiniteMovementController, Assembly-CSharp
         m_MethodName: ObjectSelected
         m_Mode: 1
         m_Arguments:
@@ -153,8 +191,8 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7348294372414838688}
-        m_TargetAssemblyTypeName: BottlePuzzleController, Assembly-CSharp
+      - m_Target: {fileID: 8498720734060244993}
+        m_TargetAssemblyTypeName: FiniteMovementController, Assembly-CSharp
         m_MethodName: ObjectDeselected
         m_Mode: 1
         m_Arguments:
@@ -213,8 +251,12 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
+  transType: 1
+  makeVoodoo: 1
   selectDistance: 0.5
-  outlinedMaterial: {fileID: 7390553463975553142, guid: 7ab6f3b0fd1a6ba41b2a47766c16613f, type: 3}
+  outlinedMaterial: {fileID: 0}
+  voodooLerpTime: 0.5
+  voodooDistanceFromController: 0.1
 --- !u!1 &6871625618946767873
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,7 +448,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2534964839176971238, guid: fcba1815fc17fbb45bebb2e7523db681, type: 3}
---- !u!1001 &9204508939008424568
+--- !u!1001 &7674977601681682524
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -498,6 +540,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6482259138405030140, guid: e6a40a13545fae948b0c7029a53098be, type: 3}
+      propertyPath: m_TurnOffAtStart
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6883378189272525482, guid: e6a40a13545fae948b0c7029a53098be, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -551,8 +597,19 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6a40a13545fae948b0c7029a53098be, type: 3}
---- !u!4 &2830070833765821152 stripped
+--- !u!4 &3636776571657773252 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6411598033650127000, guid: e6a40a13545fae948b0c7029a53098be, type: 3}
-  m_PrefabInstance: {fileID: 9204508939008424568}
+  m_PrefabInstance: {fileID: 7674977601681682524}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3784940943499572749 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6774593388282857041, guid: e6a40a13545fae948b0c7029a53098be, type: 3}
+  m_PrefabInstance: {fileID: 7674977601681682524}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81a923e5cd86df74ebe707d4c53c9fe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
