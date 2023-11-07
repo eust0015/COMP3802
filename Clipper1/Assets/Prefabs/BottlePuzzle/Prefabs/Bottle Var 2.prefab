@@ -116,18 +116,6 @@ MonoBehaviour:
   m_HoverEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8498720734060244993}
-        m_TargetAssemblyTypeName: FiniteMovementController, Assembly-CSharp
-        m_MethodName: ObjectHover
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 3784940943499572749}
         m_TargetAssemblyTypeName: UI.ToolTipPickup, Assembly-CSharp
         m_MethodName: Display
@@ -143,18 +131,6 @@ MonoBehaviour:
   m_HoverExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8498720734060244993}
-        m_TargetAssemblyTypeName: FiniteMovementController, Assembly-CSharp
-        m_MethodName: ObjectUnhover
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 3784940943499572749}
         m_TargetAssemblyTypeName: UI.ToolTipPickup, Assembly-CSharp
         m_MethodName: Hide
@@ -542,7 +518,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6482259138405030140, guid: e6a40a13545fae948b0c7029a53098be, type: 3}
       propertyPath: m_TurnOffAtStart
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6883378189272525482, guid: e6a40a13545fae948b0c7029a53098be, type: 3}
       propertyPath: m_AnchorMax.y

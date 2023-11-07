@@ -3671,6 +3671,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2551762325779295029}
     m_Modifications:
+    - target: {fileID: 346210821666212137, guid: a8d5f6f71e8a72948a41c627fcb91677, type: 3}
+      propertyPath: m_HoverExited.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 346210821666212137, guid: a8d5f6f71e8a72948a41c627fcb91677, type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 346210821666212137, guid: a8d5f6f71e8a72948a41c627fcb91677, type: 3}
+      propertyPath: m_HoverExited.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2576322922251257520}
+    - target: {fileID: 346210821666212137, guid: a8d5f6f71e8a72948a41c627fcb91677, type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2576322922251257520}
+    - target: {fileID: 346210821666212137, guid: a8d5f6f71e8a72948a41c627fcb91677, type: 3}
+      propertyPath: m_HoverExited.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Hide
+      objectReference: {fileID: 0}
+    - target: {fileID: 346210821666212137, guid: a8d5f6f71e8a72948a41c627fcb91677, type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Display
+      objectReference: {fileID: 0}
+    - target: {fileID: 346210821666212137, guid: a8d5f6f71e8a72948a41c627fcb91677, type: 3}
+      propertyPath: m_HoverExited.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UI.ToolTipPickup, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 346210821666212137, guid: a8d5f6f71e8a72948a41c627fcb91677, type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UI.ToolTipPickup, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 615162811575861501, guid: a8d5f6f71e8a72948a41c627fcb91677, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3847,6 +3879,10 @@ PrefabInstance:
       propertyPath: outlinedMaterial
       value: 
       objectReference: {fileID: -729483716852143534, guid: ff76c6c1c26775c4b81f890a4cc747f0, type: 3}
+    - target: {fileID: 4935443123968961999, guid: a8d5f6f71e8a72948a41c627fcb91677, type: 3}
+      propertyPath: tooltip
+      value: 
+      objectReference: {fileID: 8872997653586541804}
     - target: {fileID: 5257769971242366240, guid: a8d5f6f71e8a72948a41c627fcb91677, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4178,6 +4214,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2397511977461002132}
   m_SourcePrefab: {fileID: 100100000, guid: a8d5f6f71e8a72948a41c627fcb91677, type: 3}
+--- !u!114 &2576322922251257520 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8920048158499734727, guid: a8d5f6f71e8a72948a41c627fcb91677, type: 3}
+  m_PrefabInstance: {fileID: 6344041930669326967}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81a923e5cd86df74ebe707d4c53c9fe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2669214884439105665 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9007309538991743734, guid: a8d5f6f71e8a72948a41c627fcb91677, type: 3}
@@ -4384,6 +4431,11 @@ MonoBehaviour:
   outlinedMaterial: {fileID: 0}
   voodooLerpTime: 0.5
   voodooDistanceFromController: 0.1
+--- !u!224 &8872997653586541804 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2533741931563646619, guid: a8d5f6f71e8a72948a41c627fcb91677, type: 3}
+  m_PrefabInstance: {fileID: 6344041930669326967}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6359016080158068632
 PrefabInstance:
   m_ObjectHideFlags: 0

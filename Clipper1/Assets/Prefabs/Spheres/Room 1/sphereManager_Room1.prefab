@@ -44,7 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc816ed95375c8a4b885e78f7e3bc1ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationTime: 10
   spheres:
   - {fileID: 611492238425980230, guid: a63e31d20784a9b40b2a09deebdcb2b7, type: 3}
   - {fileID: 6286743946079976200, guid: aa9aa9a6937d8824d8766c1fe0c1d637, type: 3}

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b4e37dfeb747b148b4202c048a338a4, type: 3}
   m_Name: LevelClass_3
   m_EditorClassIdentifier: 
-  levelName: Level3
+  levelName: Level 3
   sceneName: Room 3
