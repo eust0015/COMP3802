@@ -410,7 +410,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5982622367246161929
 Transform:
   m_ObjectHideFlags: 0
@@ -440,7 +440,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db4d8341917aae146b5d0f4398180252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAPuzzleToSolveHere: 0
 --- !u!1 &9089487874232734860
 GameObject:
   m_ObjectHideFlags: 0
