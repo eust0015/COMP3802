@@ -22,6 +22,7 @@ public class LockScript : MonoBehaviour
         {
             if(key.GetComponent<KeyForging>().handle == keyHandle && key.GetComponent<KeyForging>().shaft == keyShaft && key.GetComponent<KeyForging>().teeth == keyTeeth)
             {
+                PuzzleManager.SetPuzzleSolved(transform.root);
                 audioSource.PlayOneShot(lockSound);
                 audioSource.PlayOneShot(solveSound);
                 locked = false;

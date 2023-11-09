@@ -10,6 +10,7 @@ public class CorrectMove : MonoBehaviour
     {
         if(other.gameObject == correctPiece)
         {
+            PuzzleManager.SetPuzzleSolved(transform.root);
             other.GetComponent<SnapBack>().enabled = false;
         }
     }
