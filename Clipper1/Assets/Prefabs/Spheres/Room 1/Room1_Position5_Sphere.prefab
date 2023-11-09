@@ -834,6 +834,14 @@ PrefabInstance:
       propertyPath: bottlesParent
       value: 
       objectReference: {fileID: 7094136336525687524}
+    - target: {fileID: 2050448282167734200, guid: 7c7c14767d3a6514385c65e7569a5a0e, type: 3}
+      propertyPath: lockController
+      value: 
+      objectReference: {fileID: 1652892429517345386}
+    - target: {fileID: 2050448282167734200, guid: 7c7c14767d3a6514385c65e7569a5a0e, type: 3}
+      propertyPath: roomPositionSphere
+      value: 
+      objectReference: {fileID: 5090012494660792949}
     - target: {fileID: 2101468903594710146, guid: 7c7c14767d3a6514385c65e7569a5a0e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3188,6 +3196,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2551762325779295029, guid: 7c7c14767d3a6514385c65e7569a5a0e, type: 3}
   m_PrefabInstance: {fileID: 4027029361055190695}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1652892429517345386 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2383144407820082381, guid: 7c7c14767d3a6514385c65e7569a5a0e, type: 3}
+  m_PrefabInstance: {fileID: 4027029361055190695}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ab057e32b17a7342a4b2375cd8a3a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &5530940982493000267 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8872997653586541804, guid: 7c7c14767d3a6514385c65e7569a5a0e, type: 3}

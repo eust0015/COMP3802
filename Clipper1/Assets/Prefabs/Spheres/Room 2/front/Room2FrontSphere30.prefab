@@ -837,7 +837,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1889060403222105491, guid: 260f13c9e2a936a4ea2469f292a266ca, type: 3}
       propertyPath: m_Name
-      value: LevelTransitionSphere to Room 3
+      value: LevelTransitionSphere to Room 1
       objectReference: {fileID: 0}
     - target: {fileID: 4182567543537227304, guid: 260f13c9e2a936a4ea2469f292a266ca, type: 3}
       propertyPath: m_Materials.Array.data[0]

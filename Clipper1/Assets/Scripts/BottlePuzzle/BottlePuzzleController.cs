@@ -16,11 +16,34 @@ public class BottlePuzzleController : MonoBehaviour
     // Holds the gameobject that holds the rest of the bottles
     public GameObject bottlesParent;
 
+    private bool solved = false;
+    
+    // The lock Controller
+    public LockController lockController;
+    
+    // The sphereUI prefab of this room position
+    public Transform roomPositionSphere;
+    
     public void Start()
     {
 
         posCheckCoroutine = CheckBottlePositions();
         StartCoroutine(posCheckCoroutine);
+    }
+
+    public void Update() {
+
+        // Check if the puzzle has been solved for purposes of tracking solved puzzles
+        if (!solved) {
+            if (!lockController.locked) {
+
+                // Set solved to true
+                solved = true;
+                
+                // Update the puzzle manager
+                PuzzleManager.SetPuzzleSolved(roomPositionSphere);
+            }
+        }
     }
 
     // Called when the player selects the bottle

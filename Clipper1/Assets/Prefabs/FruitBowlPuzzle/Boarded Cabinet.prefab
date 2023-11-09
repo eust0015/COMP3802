@@ -1197,6 +1197,7 @@ MonoBehaviour:
   targetApples: 1
   targetBananas: 3
   targetOranges: 4
+  roomPositionSphere: {fileID: 0}
   planks:
   - {fileID: 1313548522253042785}
   - {fileID: 7696197607064689817}
