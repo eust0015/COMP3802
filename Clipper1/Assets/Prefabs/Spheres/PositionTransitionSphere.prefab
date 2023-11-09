@@ -440,7 +440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db4d8341917aae146b5d0f4398180252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAPuzzleToSolveHere: 0
+  isAPuzzleToSolveHere: 1
 --- !u!1 &9089487874232734860
 GameObject:
   m_ObjectHideFlags: 0
