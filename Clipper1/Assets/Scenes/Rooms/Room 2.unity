@@ -921,18 +921,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1601176160}
     m_Modifications:
-    - target: {fileID: 1824978073405167025, guid: 01ea9aa4765ede945bf4106b2b5be70d, type: 3}
-      propertyPath: spheres.Array.size
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824978073405167025, guid: 01ea9aa4765ede945bf4106b2b5be70d, type: 3}
-      propertyPath: spheres.Array.data[14]
-      value: 
-      objectReference: {fileID: 6597280412716239714, guid: 4739d83cf32a9724c8395bbb34f3f41b, type: 3}
-    - target: {fileID: 1824978073405167025, guid: 01ea9aa4765ede945bf4106b2b5be70d, type: 3}
-      propertyPath: spheres.Array.data[15]
-      value: 
-      objectReference: {fileID: 6597280412716239714, guid: 4739d83cf32a9724c8395bbb34f3f41b, type: 3}
     - target: {fileID: 4834940043127959142, guid: 01ea9aa4765ede945bf4106b2b5be70d, type: 3}
       propertyPath: m_Name
       value: sphereManager_Room2_Front

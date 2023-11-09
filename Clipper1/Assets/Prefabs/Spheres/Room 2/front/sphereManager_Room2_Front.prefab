@@ -66,4 +66,5 @@ MonoBehaviour:
   - {fileID: 6597280412716239714, guid: 69c2105db3cb0724ca37e9bb9a18f289, type: 3}
   - {fileID: 6597280412716239714, guid: 4bce119460620df479418ef546aee749, type: 3}
   - {fileID: 6597280412716239714, guid: af9fabeabaa28734ea2499bf576c3c59, type: 3}
+  - {fileID: 6597280412716239714, guid: 0db50b587db67a74f886b3eb3e51fbe5, type: 3}
   currentSphere: {fileID: 2506159361519578715, guid: fcb6216c8690fe64d89631491c9520f2, type: 3}
