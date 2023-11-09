@@ -9,6 +9,7 @@ public class SnapBack1 : MonoBehaviour
     private double timer;
     private double timer2;
     public double snapBackTimer = 0.1;
+    private bool isHeld = false;
     public int snapBackSpeed = 5;
     void Start()
     {
@@ -21,7 +22,7 @@ public class SnapBack1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameObject.transform.position != snapBackPosition)
+        if (gameObject.transform.position != snapBackPosition && isHeld == false)
         {
             if (timer < 0)
             {
@@ -36,13 +37,13 @@ public class SnapBack1 : MonoBehaviour
                 timer -= Time.deltaTime;
             }
         }
-        if (gameObject.transform.rotation != snapBackRotation)
+        if (gameObject.transform.rotation != snapBackRotation && isHeld == false)
         {
-            Debug.Log("AH");
+            //Debug.Log("AH");
             timer2 -= Time.deltaTime;
             if(timer2 < 0)
             {
-                Debug.Log("AH2");
+                //Debug.Log("AH2");
                 gameObject.transform.rotation = Quaternion.RotateTowards(transform.rotation, snapBackRotation, snapBackSpeed*90*Time.deltaTime);
                 if(gameObject.transform.rotation == snapBackRotation)
                 {
