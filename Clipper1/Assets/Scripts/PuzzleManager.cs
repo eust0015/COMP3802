@@ -6,7 +6,7 @@ public static class PuzzleManager
 {
     private static bool[] isAPuzzleToSolveHereLevel1 = new bool[]
     {
-        false, // Position 1
+        true, // Position 1 - Tutorial Puzzle
         false, // Position 2
         false, // Position 3
         false, // Position 4

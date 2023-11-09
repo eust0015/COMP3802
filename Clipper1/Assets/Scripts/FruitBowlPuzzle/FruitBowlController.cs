@@ -9,6 +9,9 @@ public class FruitBowlController : MonoBehaviour {
     public int targetApples = -1;
     public int targetBananas = -1;
     public int targetOranges = -1;
+    
+    // The sphereUI prefab of this room position
+    public Transform roomPositionSphere;
 
     private HashSet<Fruit> fruitHashSet = new HashSet<Fruit>();
     
@@ -47,6 +50,9 @@ public class FruitBowlController : MonoBehaviour {
             
             // Set solved to true
             solved = true;
+            
+            // Set solved to true in the puzzleManager
+            PuzzleManager.SetPuzzleSolved(roomPositionSphere);
         }
     }
 
