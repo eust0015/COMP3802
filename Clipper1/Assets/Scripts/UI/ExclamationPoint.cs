@@ -4,11 +4,15 @@ namespace UI
 {
     public class ExclamationPoint : MonoBehaviour
     {
-        public bool isAPuzzleToSolveHere;
+        private void Start()
+        {
+            if (PuzzleManager.IsPuzzleToSolve(transform.root)) return;
+            gameObject.SetActive(false);
+        }
 
         public void Display()
         {
-            if (!isAPuzzleToSolveHere) return;
+            if (!PuzzleManager.IsPuzzleToSolve(transform.root)) return;
             gameObject.SetActive(true);
         }
         
