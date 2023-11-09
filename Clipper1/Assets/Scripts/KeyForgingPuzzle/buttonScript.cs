@@ -7,7 +7,7 @@ public class buttonScript : MonoBehaviour
     public int location;
     public int direction;
     public GameObject parent;
-    private void OnMouseDown()
+    public void GetButtonPress()
     {
         parent.GetComponent<ColourSelector>().changeMaterial(location,direction);
     }
