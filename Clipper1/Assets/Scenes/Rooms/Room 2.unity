@@ -482,10 +482,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 298231753475401268, guid: 1c19837a5f1657748bdc25ed3e3ab37a, type: 3}
-      propertyPath: index
-      value: 24
-      objectReference: {fileID: 0}
     - target: {fileID: 612467290000228995, guid: 1c19837a5f1657748bdc25ed3e3ab37a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -598,14 +594,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2335220586636214783, guid: 1c19837a5f1657748bdc25ed3e3ab37a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.78
-      objectReference: {fileID: 0}
-    - target: {fileID: 2335220586636214783, guid: 1c19837a5f1657748bdc25ed3e3ab37a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -19.04
-      objectReference: {fileID: 0}
     - target: {fileID: 2575488104845841112, guid: 1c19837a5f1657748bdc25ed3e3ab37a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -653,14 +641,6 @@ PrefabInstance:
     - target: {fileID: 2629418015408167393, guid: 1c19837a5f1657748bdc25ed3e3ab37a, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3119192849686009356, guid: 1c19837a5f1657748bdc25ed3e3ab37a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 3119192849686009356, guid: 1c19837a5f1657748bdc25ed3e3ab37a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -19.98
       objectReference: {fileID: 0}
     - target: {fileID: 3592149662047931451, guid: 1c19837a5f1657748bdc25ed3e3ab37a, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1220,7 +1200,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1282773783}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
