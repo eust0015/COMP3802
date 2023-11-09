@@ -55,7 +55,7 @@ namespace UI
         {
             if (!pressed) return;
             gameObject.SetActive(true);
-            transform.position = Camera.main.transform.position + Camera.main.transform.forward * spawnOffsetDistance;
+            transform.position = (Camera.main.transform.position + Camera.main.transform.forward * spawnOffsetDistance) + Vector3.down;
         }
         
         private void UpdatePage(float pageNumber)
