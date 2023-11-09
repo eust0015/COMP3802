@@ -294,7 +294,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9089487874232734860, guid: 43d3d7f51535d5845ad4cdac32e4a5c0, type: 3}
       propertyPath: m_Name
-      value: SphereUI (1)
+      value: Room1_Position5_Sphere01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

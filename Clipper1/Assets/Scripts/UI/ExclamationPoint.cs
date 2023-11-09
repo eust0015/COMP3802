@@ -6,13 +6,13 @@ namespace UI
     {
         private void Start()
         {
-            if (PuzzleManager.IsPuzzleToSolve(transform.root)) return;
+            if (PuzzleManager.IsPuzzleToSolve(transform.parent)) return;
             gameObject.SetActive(false);
         }
 
         public void Display()
         {
-            if (!PuzzleManager.IsPuzzleToSolve(transform.root)) return;
+            if (!PuzzleManager.IsPuzzleToSolve(transform.parent)) return;
             gameObject.SetActive(true);
         }
         
