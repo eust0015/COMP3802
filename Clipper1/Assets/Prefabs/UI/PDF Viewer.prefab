@@ -8533,22 +8533,16 @@ MonoBehaviour:
   spawnOffsetDistance: 2
   page: {fileID: 8457732569894944288}
   pages:
-  - {fileID: 21300000, guid: 6b4e6a2d2d0462b449672a2228c43389, type: 3}
-  - {fileID: 21300000, guid: 64d28e63a14b9d142974bdedce0ad141, type: 3}
-  - {fileID: 21300000, guid: 894be90e6c2cd7445b4b9c90e550375f, type: 3}
-  - {fileID: 21300000, guid: d09084eb9ac3d284dad8365531f9dffb, type: 3}
-  - {fileID: 21300000, guid: 0ad9c93714daf564d8d897d77e3c8e95, type: 3}
-  - {fileID: 21300000, guid: 1ec5edcc18fba904faa23567a333c976, type: 3}
-  - {fileID: 21300000, guid: 858b0a62c93c4bd46a5a785291277d33, type: 3}
-  - {fileID: 21300000, guid: 4cd941aa51ba79c459176bc94a5666d5, type: 3}
-  - {fileID: 21300000, guid: 1fe552b9c71995b41a62fcdb81125975, type: 3}
-  - {fileID: 21300000, guid: 0213429b217f2854bbc1ac970ea0e1c2, type: 3}
-  - {fileID: 21300000, guid: 28c9f48c231cdce4b82b6271e95f7583, type: 3}
-  - {fileID: 21300000, guid: d3dc3ce05d7d83642a1bffd3e37b41a1, type: 3}
-  - {fileID: 21300000, guid: 5144bbf4f455df04fb3e2217bde3e46f, type: 3}
-  - {fileID: 21300000, guid: 3c566bb2f8be88e4eb6ef8ae3a3231c4, type: 3}
-  - {fileID: 21300000, guid: 64111f4d2073ec84c962400408c31bfa, type: 3}
-  - {fileID: 21300000, guid: 9137a9ebb5b9a6f4faa0624af4833ab5, type: 3}
+  - {fileID: 21300000, guid: b2ee460e3346ad84ab6020d4d6683602, type: 3}
+  - {fileID: 21300000, guid: d493f363e7f3abf48988638290ac4a88, type: 3}
+  - {fileID: 21300000, guid: 76f6d1e3023d30b4bb789f465c7b46e0, type: 3}
+  - {fileID: 21300000, guid: 8dd90a14129720e4e94b5fb7fb20a543, type: 3}
+  - {fileID: 21300000, guid: fe3fc1329713c2c40acd4c79796c0d66, type: 3}
+  - {fileID: 21300000, guid: dcf515e881963fe4dab2fafd6ed73230, type: 3}
+  - {fileID: 21300000, guid: d39ae11e1da2d294291a595e633b0f5b, type: 3}
+  - {fileID: 21300000, guid: 46e23719161f7384595570dfe30c6ffe, type: 3}
+  - {fileID: 21300000, guid: 6242057e60ee65a4e96571a0fefbf3d7, type: 3}
+  - {fileID: 21300000, guid: 79bc9dade5ae6e64aad95a624cbc21f7, type: 3}
   pageNumberSlider: {fileID: 6311596949736762710}
   valueText: {fileID: 6311596949673807896}
 --- !u!4 &2962882750571066053 stripped
