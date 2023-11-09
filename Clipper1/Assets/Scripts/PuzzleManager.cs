@@ -93,12 +93,19 @@ public static class PuzzleManager
             }
     }
     
-    public static bool IsPuzzleToSolve(Transform rootTransformSphere)
-    {
+    public static bool IsPuzzleToSolve(Transform rootTransformSphere) {
+        
         // Names look like: Room2FrontSphere01
         string name = rootTransformSphere.gameObject.name;
         string nameWithRoomRemoved = name.Substring(5);
-        int room = int.Parse(name.Substring(4, 1));
+        
+        // Make sure that the string has an int to parse else return false
+        int room = -1;
+        int.TryParse(name.Substring(4, 1), out room);
+        if (room == -1) {
+            return false;
+        }
+        
         int positionStartIndex = 0;
         int positionLength = 1;
 
@@ -106,11 +113,16 @@ public static class PuzzleManager
         {
             if (!char.IsDigit(nameWithRoomRemoved, i)) continue;
             positionStartIndex = i;
-            if (char.IsDigit(nameWithRoomRemoved, i + 1)) positionLength = 2;
+            if (i < nameWithRoomRemoved.Length - 1 && char.IsDigit(nameWithRoomRemoved, i + 1)) positionLength = 2;
             break;
         }
 
-        int position = int.Parse(nameWithRoomRemoved.Substring(positionStartIndex, positionLength));
+        // Make sure that the string has a position int to parse else return false
+        int position = -1;
+        int.TryParse(nameWithRoomRemoved.Substring(positionStartIndex, positionLength), out position);
+        if (position == -1) {
+            return false;
+        }
         
         switch (room)
         {
