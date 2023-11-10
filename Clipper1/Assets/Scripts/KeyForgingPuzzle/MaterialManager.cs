@@ -10,19 +10,20 @@ public class MaterialManager : MonoBehaviour
     public Material material4;
     public int count = 1;
 
-    public void ChangeMaterial(int modifier)
-    {
+    public void ChangeMaterial(int modifier) {
+        
+        // Update the count (+-1)
         count += modifier;
-        if (modifier == 0)
-        {
-            modifier = 4;
-        }
-        if (modifier == 5)
-        {
-            modifier = 1;
+
+        if(count <= 0) {
+            count = 4;
         }
 
-        switch(modifier)
+        if (count >= 5) {
+            count = 1;
+        }
+
+        switch(count)
         {
             case 1:
                 gameObject.GetComponent<MeshRenderer>().material = material1;
