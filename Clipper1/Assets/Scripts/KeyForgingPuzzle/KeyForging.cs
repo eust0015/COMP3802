@@ -31,7 +31,7 @@ public class KeyForging : MonoBehaviour
 
             switch(cycle)
             {
-                case 1://shaft
+                case 2://shaft
                     switch(selector1.GetComponent<MaterialManager>().count)
                     {
                         case 1://silver
@@ -42,7 +42,7 @@ public class KeyForging : MonoBehaviour
                             ironKey.transform.GetChild(0).gameObject.SetActive(false);
                             handle = 1;
                             break;
-                        case 2://iron
+                        case 3://iron
                             blankKey.transform.GetChild(0).gameObject.SetActive(false);
                             bronzeKey.transform.GetChild(0).gameObject.SetActive(false);
                             goldKey.transform.GetChild(0).gameObject.SetActive(false);
@@ -50,7 +50,7 @@ public class KeyForging : MonoBehaviour
                             ironKey.transform.GetChild(0).gameObject.SetActive(true);
                             handle = 2;
                             break;
-                        case 3://gold
+                        case 2://gold
                             blankKey.transform.GetChild(0).gameObject.SetActive(false);
                             bronzeKey.transform.GetChild(0).gameObject.SetActive(false);
                             goldKey.transform.GetChild(0).gameObject.SetActive(true);
@@ -69,7 +69,7 @@ public class KeyForging : MonoBehaviour
                     }
                     cycle++;
                     break;
-                case 2://handle
+                case 1://handle
                     switch (selector2.GetComponent<MaterialManager>().count)
                     {
                         case 1://silver
@@ -80,7 +80,7 @@ public class KeyForging : MonoBehaviour
                             ironKey.transform.GetChild(1).gameObject.SetActive(false);
                             shaft = 1;
                             break;
-                        case 2://iron
+                        case 3://iron
                             blankKey.transform.GetChild(1).gameObject.SetActive(false);
                             bronzeKey.transform.GetChild(1).gameObject.SetActive(false);
                             goldKey.transform.GetChild(1).gameObject.SetActive(false);
@@ -88,7 +88,7 @@ public class KeyForging : MonoBehaviour
                             ironKey.transform.GetChild(1).gameObject.SetActive(true);
                             shaft = 2;
                             break;
-                        case 3://gold
+                        case 2://gold
                             blankKey.transform.GetChild(1).gameObject.SetActive(false);
                             bronzeKey.transform.GetChild(1).gameObject.SetActive(false);
                             goldKey.transform.GetChild(1).gameObject.SetActive(true);
@@ -118,7 +118,7 @@ public class KeyForging : MonoBehaviour
                             ironKey.transform.GetChild(2).gameObject.SetActive(false);
                             teeth = 1;
                             break;
-                        case 2://iron
+                        case 3://iron
                             blankKey.transform.GetChild(2).gameObject.SetActive(false);
                             bronzeKey.transform.GetChild(2).gameObject.SetActive(false);
                             goldKey.transform.GetChild(2).gameObject.SetActive(false);
@@ -126,7 +126,7 @@ public class KeyForging : MonoBehaviour
                             ironKey.transform.GetChild(2).gameObject.SetActive(true);
                             teeth = 2;
                             break;
-                        case 3://gold
+                        case 2://gold
                             blankKey.transform.GetChild(2).gameObject.SetActive(false);
                             bronzeKey.transform.GetChild(2).gameObject.SetActive(false);
                             goldKey.transform.GetChild(2).gameObject.SetActive(true);

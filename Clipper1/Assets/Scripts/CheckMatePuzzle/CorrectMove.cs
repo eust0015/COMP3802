@@ -5,6 +5,8 @@ using UnityEngine;
 public class CorrectMove : MonoBehaviour
 {
     public GameObject correctPiece;
+    public AudioClip solveSound;
+    public AudioSource audioSource;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -12,6 +14,7 @@ public class CorrectMove : MonoBehaviour
         {
             PuzzleManager.SetPuzzleSolved(transform.root);
             other.GetComponent<SnapBack>().enabled = false;
+            audioSource.PlayOneShot(solveSound);
         }
     }
 }

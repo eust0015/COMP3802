@@ -30,6 +30,8 @@ public class SnapBack1 : MonoBehaviour
                 if (gameObject.transform.position == snapBackPosition)
                 {
                     timer = snapBackTimer;
+                    gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                    gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
                 }
             }
             else
@@ -45,11 +47,23 @@ public class SnapBack1 : MonoBehaviour
             {
                 //Debug.Log("AH2");
                 gameObject.transform.rotation = Quaternion.RotateTowards(transform.rotation, snapBackRotation, snapBackSpeed*90*Time.deltaTime);
-                if(gameObject.transform.rotation == snapBackRotation)
+                gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+                if (gameObject.transform.rotation == snapBackRotation)
                 {
                     timer2 = snapBackTimer;
                 }
             }
         }
+    }
+
+    public void startHolding()
+    {
+        isHeld = true;
+    }
+
+    public void endHolding()
+    {
+        isHeld = false;
     }
 }

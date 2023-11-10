@@ -15,7 +15,13 @@ public class LockScript : MonoBehaviour
     public AudioClip lockSound;
     public AudioClip solveSound;
     public AudioSource audioSource;
-    
+    private float soundDelay;
+
+    private void Start()
+    {
+        soundDelay = lockSound.length;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other == key.GetComponent<SphereCollider>())
@@ -24,10 +30,15 @@ public class LockScript : MonoBehaviour
             {
                 PuzzleManager.SetPuzzleSolved(transform.root);
                 audioSource.PlayOneShot(lockSound);
-                audioSource.PlayOneShot(solveSound);
                 locked = false;
                 lockBottom.GetComponent<Rigidbody>().useGravity = true;
                 lockBottom.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+                while(soundDelay > 0)
+                {
+                    soundDelay -= Time.deltaTime;
+                }
+                audioSource.PlayOneShot(solveSound);
+                PuzzleManager.SetPuzzleSolved(transform.root);
                 //lockBottom.GetComponent<MeshRenderer>().material.color = Color.Lerp(lockBottom.GetComponent<MeshRenderer>().material.color, lockBottom.GetComponent<MeshRenderer>().material.color, fadeTime * Time.deltaTime);
                 //lockTop.GetComponent<MeshRenderer>().material.color = Color.Lerp(lockTop.GetComponent<MeshRenderer>().material.color, lockTop.GetComponent<MeshRenderer>().material.color, fadeTime * Time.deltaTime);
             }

@@ -10,6 +10,7 @@ public class SnapBack : MonoBehaviour
     private double timer2;
     public double snapBackTimer = 0.1;
     public int snapBackSpeed = 5;
+    private bool isHeld = false;
     void Start()
     {
         snapBackPosition = gameObject.transform.position;
@@ -21,7 +22,7 @@ public class SnapBack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameObject.transform.position != snapBackPosition)
+        if (gameObject.transform.position != snapBackPosition && isHeld == false)
         {
             if (timer < 0)
             {
@@ -51,5 +52,14 @@ public class SnapBack : MonoBehaviour
                 timer2 -= Time.deltaTime;
             }
         }
+    }
+    public void startHolding()
+    {
+        isHeld = true;
+    }
+
+    public void endHolding()
+    {
+        isHeld = false;
     }
 }

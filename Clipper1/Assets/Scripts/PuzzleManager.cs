@@ -17,7 +17,7 @@ public static class PuzzleManager
     {
         false, // Position 1
         false, // Position 2
-        false, // Position 3
+        true, // Position 3
         false, // Position 4
         false, // Position 5
         false, // Position 6
@@ -35,7 +35,14 @@ public static class PuzzleManager
         false, // Position 18
         false, // Position 19
         false, // Position 20
-        false // Position 21
+        false, // Position 21
+        false, // Position 22
+        false, // Position 23
+        false, // Position 24
+        false, // Position 25
+        false, // Position 26
+        false, // Position 27
+        true // Position 28
     };
     
     private static bool[] isAPuzzleToSolveHereLevel3 = new bool[]
