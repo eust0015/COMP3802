@@ -31,7 +31,7 @@ public class KeyForging : MonoBehaviour
 
             switch(cycle)
             {
-                case 2://shaft
+                case 1://shaft
                     switch(selector1.GetComponent<MaterialManager>().count)
                     {
                         case 1://silver
@@ -69,7 +69,7 @@ public class KeyForging : MonoBehaviour
                     }
                     cycle++;
                     break;
-                case 1://handle
+                case 2://handle
                     switch (selector2.GetComponent<MaterialManager>().count)
                     {
                         case 1://silver
