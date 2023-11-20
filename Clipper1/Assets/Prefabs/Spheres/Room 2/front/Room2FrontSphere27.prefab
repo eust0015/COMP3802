@@ -205,6 +205,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rube
       objectReference: {fileID: 0}
+    - target: {fileID: 2800150938171768469, guid: f0d9ac2734168d745a0ac036cdb0eeab, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5327583280074412046, guid: f0d9ac2734168d745a0ac036cdb0eeab, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.6888808
